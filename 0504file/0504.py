@@ -2,13 +2,13 @@ f = open('0504hw.txt', 'r+') #pwd 0504file
 
 lnum = 0 #count line
 wnum = 0 #count character except[...]
-wwnum = 0 #count character
+wwnum = 0 #count all character
 for line in f: #line
     lnum = lnum + 1
     for i in line:
         if i not in ['\n']:
             wwnum += 1
-        if i not in ['，','；','。','\n',' ']:
+        if i not in ['，','；','。','\n',' ','！','？']:
             wnum += 1
 
 print('\n此檔案共',lnum,'行\n')
