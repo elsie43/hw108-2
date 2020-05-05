@@ -1,11 +1,9 @@
-f = open('0504hw.txt', 'r+')
+f = open('0504hw.txt', 'r+') #pwd 0504file 
 
-#count line
-lnum = 0
-wnum = 0
-wwnum = 0
-for line in f:
-    #print(line, end = '\n')
+lnum = 0 #count line
+wnum = 0 #count character except[...]
+wwnum = 0 #count character
+for line in f: #line
     lnum = lnum + 1
     for i in line:
         if i not in ['\n']:
