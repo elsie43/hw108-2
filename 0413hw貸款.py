@@ -16,5 +16,4 @@ def loan(p,iy,ny):
 
 print("貸款試算，請注意單位")
 loan(eval(input("請輸入貸款本金(元)：")), eval(input("請輸入年利率(%)：")), eval(input("請輸入貸款年限（年）：")))
-#測試git
-print("success")
+
