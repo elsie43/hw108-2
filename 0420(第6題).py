@@ -8,6 +8,7 @@ Original file is located at
 """
 
 #6-52 第6題
+"""
 x = input("輸入單字：") 
 l = [] 
 for i in x :
@@ -17,3 +18,8 @@ l.reverse()
 
 for i in range(len(l)):
   print(l[i])
+"""
+#字串反轉
+r = list(input("輸入單字："))
+r.reverse()
+print('\n'.join(r))

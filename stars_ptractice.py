@@ -7,12 +7,12 @@ Original file is located at
     https://colab.research.google.com/drive/1gThhb9lQFJaY3sy6dMCooGBy95Zn574Z
 """
 
-#i是底層星星數
-i = eval(input("輸入底層星星數："))
-#確認總空格數
-print("一層總空格數：", i*2-1)
-#j是第幾層
-for j in range(1, i+1):
+
+i = eval(input("輸入底層星星數：")) #i是底層星星數
+
+print("一層總空格數：", i*2-1) #確認總空格數
+
+for j in range(1, i+1): #j是第幾層
   print((i-j)*" ", j*"*",(i-j)*" ")
 
 n = eval(input("height="))
