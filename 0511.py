@@ -2,16 +2,13 @@ tcoding = [] #全班計程成績存入空串列
 tacc = [] #全班會計成績存入空串列
 tcal=[] #全班微積分成績存入空串列
 print("執行時，請依序輸入會計、計算機程式、微積分之分數\n")
-member = [] #建立空串列以存放學生名字
-
 class Student: 
-    num = 0
+    num = 0 #存放全班人數
     def __init__(self,name="no name"):
         """可在建立物件時新增學生名字
         e.g. s1 = Student("Amy")，未新增則預設 no name"""
-        member.append(name) #每執行一次，就在串列新增學生名以計算學生數
         self.name = name
-        self.num = len(member) 
+        Student.num = Student.num + 1 #每新增一物件就+1
         
     def getGrade(self, acc = 0,coding = 0,cal = 0): #getGrade方法求單一學生平均成績
         tacc.append(acc)
@@ -20,9 +17,8 @@ class Student:
         ave = (coding + acc + cal)/3
         print(self.name,"三科之平均成績為：" ,ave, "分")
         
-def bonus(): #額外
-    x = Student().num - 1 #全班人數
-    member.remove("no name")
+def bonus(): #額外：求全班人數與全體平均
+    x = Student.num #全班人數
     print("全班共",x,"人")
     print("全班之會計平均分數為：", sum(tacc)/x, "分")
     print("全班之計程平均分數為：", sum(tcoding)/x, "分")
