@@ -10,12 +10,17 @@ class Student:
         self.name = name
         self.__class__.num += 1 #每新增一物件就+1
         
-    def getGrade(self, acc = 0,coding = 0,cal = 0,conduct = 0): #getGrade方法求單一學生平均成績
+    def getGrade(self, acc = 0,coding = 0,cal = 0,Performance = 0): #getGrade方法求單一學生平均成績
         tacc.append(acc)
         tcoding.append(coding)
         tcal.append(cal)
+        self.__per = Performance #操行成績的私有方法
         ave = (coding + acc + cal)/3
         print(self.name,"除操行外三科之平均成績為：" ,ave, "分")
+
+    def getPerformance(self):#讀取操行成績
+        p = self.__per 
+        print(self.name,"的操行成績為", p, "分")
         
 def bonus(): #額外：求全班人數與全體平均
     x = Student.num #全班人數
@@ -36,10 +41,15 @@ s3 = Student("Bob")
 s4 = Student("Candice")
 s5 = Student("Sandra")
 s1.getGrade(90,78,85,80)
-s2.getGrade(87,92,90)
-s3.getGrade(78,85,80)
-s4.getGrade(80,95,90)
-s5.getGrade(69,80,85)
-print("\n")
+s2.getGrade(87,92,90,70)
+s3.getGrade(78,85,80,85)
+s4.getGrade(80,95,90,90)
+s5.getGrade(69,80,85,50)
+s1.getPerformance()
+s2.getPerformance()
+s3.getPerformance()
+s4.getPerformance()
+s5.getPerformance()
+print('\n')
 bonus()
 
