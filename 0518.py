@@ -10,7 +10,8 @@ class Student:
         self.name = name
         self.__class__.num += 1 #每新增一物件就+1
         
-    def getGrade(self, acc = 0,coding = 0,cal = 0,Performance = 0): #getGrade方法求單一學生平均成績
+    def getGrade(self, acc = 0,coding = 0,cal = 0,Performance = 0):
+        #getGrade方法求單一學生平均成績
         tacc.append(acc)
         tcoding.append(coding)
         tcal.append(cal)
@@ -22,7 +23,7 @@ class Student:
         p = self.__per 
         print(self.name,"的操行成績為", p, "分")
         
-def bonus(): #額外：求全班人數與全體平均
+def bonus(): #額外：求全班人數(物件數)與全體平均
     x = Student.num #全班人數
     print("全班共",x,"人")
     print("全班之會計平均分數為：", sum(tacc)/x, "分")
@@ -35,6 +36,7 @@ def bonus(): #額外：求全班人數與全體平均
 
 
 #main
+#0511的題目沒有操行成績，我就先自行輸入了
 s1 = Student("Mary")
 s2 = Student("David")
 s3 = Student("Bob")
@@ -44,12 +46,11 @@ s1.getGrade(90,78,85,80)
 s2.getGrade(87,92,90,70)
 s3.getGrade(78,85,80,85)
 s4.getGrade(80,95,90,90)
-s5.getGrade(69,80,85,50)
+s5.getGrade(69,80,85,90)
 s1.getPerformance()
 s2.getPerformance()
 s3.getPerformance()
 s4.getPerformance()
 s5.getPerformance()
-print('\n')
 bonus()
 
