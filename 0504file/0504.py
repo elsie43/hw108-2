@@ -1,4 +1,4 @@
-f = open('0504hw.txt', 'r+') #pwd 0504file 
+f = open('0504hw.txt', 'r') #pwd 0504file
 
 lnum = 0 #count line
 wnum = 0 #count character except[...]
