@@ -1,3 +1,4 @@
+#用sympy做指定運算
 import sympy as sp
 x = sp.symbols('x') #define x
 

@@ -1,3 +1,4 @@
+#繪製三角函數圖形
 import numpy as np
 import math as m
 import matplotlib.pyplot as plt
